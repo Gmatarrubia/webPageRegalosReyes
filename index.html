@@ -1,0 +1,29 @@
+<html>
+ <head><title> Lista a los reyes</title></head>
+ <body> 
+  <h3> Incluir ideas a tu lista: </h3>
+    <form action="/cgi-bin/add.py" method="POST">
+    Tu Nombre: <select name="nombre">
+        <option value="Alvaro">Alvaro</option>
+        <option value="Gonzalo">Gonzalo</option>
+        <option value="Reme">Reme</option>
+        <option value="Manolo">Manolo</option>
+    </select> <br>
+    Code: <input type="password" name="code" value=""><br>
+    Idea: <input type="text" size="70" name="idea" value=""><br>
+    <input type="submit" value="Enviar">  
+  </form>
+
+  <h3> Ver todas las listas:</h3>
+    <form action="/cgi-bin/show.py" method="POST">
+     Tu Nombre:<select name="nombre">
+        <option value="Alvaro">Alvaro</option>
+        <option value="Gonzalo">Gonzalo</option>
+        <option value="Reme">Reme</option>
+        <option value="Manolo">Manolo</option>
+     </select> <br>
+     Code: <input type="password" name="code" value=""><br>
+     <input type="submit" value="Enviar" />
+   </form>
+ </body>
+</html>
