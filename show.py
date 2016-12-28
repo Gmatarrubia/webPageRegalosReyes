@@ -16,7 +16,11 @@ nombre = form.getvalue('nombre')
 code   = form.getvalue('code')
 code   = int(code)
 key    = ord(nombre[0])+100
-lista = ['gonzalo', 'alvaro', 'reme', 'manolo']
+cursor.execute("SELECT name from sqlite_master WHERE type='table';")
+aux = cursor.fetchall()
+lista = []
+for i in aux:
+        lista.append(i[0])
 print "Content-type:text/html\r\n\r\n"
 print "<html>"
 print "<head>"
