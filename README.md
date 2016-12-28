@@ -37,5 +37,8 @@ CREATE TABLE nombre2(idea TEXT, asignado TEXT); <br>
 <h3>(3)Modificar en el index.htlm</h3>
 Añadiendo/modificando los nombres. Dejando así los mismos nombres que los creados en la base de datos.
 
-<h3>(4) ¡Listo! Entra con un navegador en la dirección ip de tu raspberry pi.</h3>
+<h3>(4)Dar permisos de escritura al directorio de la db </h3>
+sudo chmod 777 /usr/lib/cgi-bin/
+
+<h3>(5)¡Listo! Entra con un navegador en la dirección ip de tu raspberry pi.</h3>
 
