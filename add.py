@@ -38,9 +38,20 @@ if code==key:
 else:
     print "<h2>Clave incorrecta.</h2>"
 
-print """<form action="http://192.168.1.106" method="POST">
-           <input type="submit" value="Volver">
-         </form>"""
+#Crear un boton para volver a index.html
+import socket
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+s.connect(("gmail.com",80))
 
+print "<form action=\"http://%s\" method=\"POST\">" % (s.getsockname()[0])
+print """<input type="submit" value="Volver">
+         </form>"""
+s.close()
+#########Metodo antiguo si se conoce la ip, no hace falta conexion a internet#####
+#print """<form action="http://192.168.1.106" method="POST">
+#           <input type="submit" value="Volver">
+#         </form>"""
+#Cerramos la estructura de la pagina web
+##################################################################################
 print "</body>"
 print "</html>"
